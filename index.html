@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Add your track</title>
+ 
+<!-- 🔧 REMPLACE l'URL ci-dessous par ton adresse Apps Script /exec.
+     Elle apparaît à deux endroits : ici et dans le script plus bas. -->
+<meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/TON_ID/exec">
+ 
+<meta name="robots" content="noindex">
+<style>
+  html, body {
+    height: 100%; margin: 0;
+    background: #0B0704;
+    color: #F6EBD4;
+    font-family: 'Chakra Petch', 'Segoe UI Semibold', 'Trebuchet MS', system-ui, sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .wrap { padding: 24px; }
+  .glyph {
+    width: 44px; height: 44px; margin: 0 auto 18px;
+    background: linear-gradient(140deg, #FFDE8A 0%, #E3AE33 40%, #7A5410 100%);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    animation: pulse 1.2s ease-in-out infinite;
+  }
+  p { font-size: 15px; font-weight: 500; color: #B9975B; }
+  a { color: #E3AE33; }
+  @keyframes pulse { 50% { opacity: .45; } }
+  @media (prefers-reduced-motion: reduce) { .glyph { animation: none; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="glyph"></div>
+    <p>Opening the form…<br>
+       <a id="fallback" href="https://script.google.com/macros/s/AKfycbwPGiAVYRronXsgnSDnRAKqqnSUaMF4qlruY-jtVaDy_dJTIJuHjRpa_I7CvGGrptabqQ/exec">Tap here if nothing happens</a></p>
+  </div>
+ 
+<script>
+  // 🔧 REMPLACE aussi ici.
+  var CIBLE = "https://script.google.com/macros/s/AKfycbwPGiAVYRronXsgnSDnRAKqqnSUaMF4qlruY-jtVaDy_dJTIJuHjRpa_I7CvGGrptabqQ/exec";
+ 
+  document.getElementById("fallback").href = CIBLE;
+ 
+  // replace() plutôt que href : le bouton Retour du téléphone ramène
+  // le viewer là où il était, pas sur cette page qui le renverrait
+  // aussitôt vers le formulaire.
+  location.replace(CIBLE);
+</script>
+</body>
+</html>
