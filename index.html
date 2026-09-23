@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Add your track</title>
- 
+
 <!-- 🔧 REMPLACE l'URL ci-dessous par ton adresse Apps Script /exec.
      Elle apparaît à deux endroits : ici et dans le script plus bas. -->
 <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbx7paMsJvz0zUT-RfgCP4HQxNw7oVbRRkhbMeD_oGfavaLSxfPzBo8hXXGsD6vsZfQChg/exec">
- 
+
 <meta name="robots" content="noindex">
 <style>
   html, body {
@@ -20,31 +20,31 @@
     text-align: center;
   }
   .wrap { padding: 24px; }
-  .glyph {
-    width: 44px; height: 44px; margin: 0 auto 18px;
-    background: linear-gradient(140deg, #FFDE8A 0%, #E3AE33 40%, #7A5410 100%);
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  .logo {
+    display: block; width: 110px; height: auto; margin: 0 auto 18px;
+    filter: drop-shadow(0 0 14px rgba(227, 174, 51, 0.35));
     animation: pulse 1.2s ease-in-out infinite;
   }
   p { font-size: 15px; font-weight: 500; color: #B9975B; }
   a { color: #E3AE33; }
   @keyframes pulse { 50% { opacity: .45; } }
-  @media (prefers-reduced-motion: reduce) { .glyph { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .logo { animation: none; } }
 </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="glyph"></div>
+    <img class="logo" alt="Dta07" width="110" height="86"
+         src="https://raw.githubusercontent.com/Dta07/m/refs/heads/main/Logo_light.png">
     <p>Opening the form…<br>
        <a id="fallback" href="https://script.google.com/macros/s/AKfycbx7paMsJvz0zUT-RfgCP4HQxNw7oVbRRkhbMeD_oGfavaLSxfPzBo8hXXGsD6vsZfQChg/exec">Tap here if nothing happens</a></p>
   </div>
- 
+
 <script>
   // 🔧 REMPLACE aussi ici.
   var CIBLE = "https://script.google.com/macros/s/AKfycbx7paMsJvz0zUT-RfgCP4HQxNw7oVbRRkhbMeD_oGfavaLSxfPzBo8hXXGsD6vsZfQChg/exec";
- 
+
   document.getElementById("fallback").href = CIBLE;
- 
+
   // replace() plutôt que href : le bouton Retour du téléphone ramène
   // le viewer là où il était, pas sur cette page qui le renverrait
   // aussitôt vers le formulaire.
